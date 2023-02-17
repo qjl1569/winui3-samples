@@ -1,0 +1,20 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Window
+    x:Class="titlebar_customization.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:titlebar_customization"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    SizeChanged="Window_SizeChanged">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <NavigationView x:Name="RootNavigationView" PaneDisplayMode="Auto" IsBackEnabled="True">
+            
+        </NavigationView>
+        <local:MinMaxCloseControl x:Name="MinMaxCloseControl" OnMin="MinMaxCloseControl_OnMin" OnMax="MinMaxCloseControl_OnMax" OnClose="MinMaxCloseControl_OnClose" SizeChanged="MinMaxCloseControl_SizeChanged"/>
+    </Grid>
+</Window>
